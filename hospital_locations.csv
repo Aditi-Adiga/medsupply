@@ -1,0 +1,21 @@
+hospital_id,hospital_name,city,latitude,longitude
+H01,Hospital 01,Mangaluru,12.9141,74.856
+H02,Hospital 02,Udupi,13.3409,74.7421
+H03,Hospital 03,Manipal,13.3528,74.7921
+H04,Hospital 04,Kundapura,13.6291,74.6902
+H05,Hospital 05,Mysuru,12.2958,76.6394
+H06,Hospital 06,Bengaluru,12.9716,77.5946
+H07,Hospital 07,Shivamogga,13.9299,75.5681
+H08,Hospital 08,Hassan,13.0033,76.1004
+H09,Hospital 09,Chikkamagaluru,13.3161,75.772
+H10,Hospital 10,Madikeri,12.4244,75.7382
+H11,Hospital 11,Tumakuru,13.3392,77.101
+H12,Hospital 12,Davangere,14.4644,75.9218
+H13,Hospital 13,Hubballi,15.3647,75.124
+H14,Hospital 14,Belagavi,15.8497,74.4977
+H15,Hospital 15,Kalaburagi,17.3297,76.8343
+H16,Hospital 16,Ballari,15.1394,76.9214
+H17,Hospital 17,Mandya,12.5218,76.8951
+H18,Hospital 18,Chitradurga,14.2306,76.398
+H19,Hospital 19,Kolar,13.1367,78.1292
+H20,Hospital 20,Chikkaballapur,13.4355,77.7315

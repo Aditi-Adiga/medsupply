@@ -1,0 +1,14 @@
+export type User = {id:string; username:string; hospital_id:string; hospital_name:string; role:string; two_factor_ready:boolean; external_notifications_enabled:boolean; session_expires_at:string};
+export type Medicine = {id:string; name:string};
+export type Batch = {batch_id:string; medicine_id?:string; unit:string; quantity:number; reserved:number; expiry:string};
+export type Risk = {key:string; kind:string; severity:string; message:string; active:boolean; medicine_id:string; usable_quantity:number; stockout_in_days?:number|null; forecast_limited?:boolean; lead_days?:number; expected_unused?:number|null; days_until_expiry?:number; unit:string; recommended_action:string};
+export type Alert = {id:string; kind:string; severity:string; message:string; state:string; medicine_id:string|null; request_id:string|null; recommended_action:string};
+export type Allocation = {batch_id:string; quantity:number; expiry:string; unit:string};
+export type SupplyRequest = {id:string; recipient:string; donor:string; medicine_id:string; unit:string; requested:number; approved:number; allocations:Allocation[]; urgency:string; reason:string; status:string; in_transit:number; created:string; updated:string; created_by:string; history?:{action:string; user_id:string; at:string}[]};
+export type Recommendation = {donor_city?:string; recipient_city?:string; road_distance_km?:number; estimated_delivery_minutes?:number; donor_hospital:string; medicine:string; unit:string; available_quantity:number; estimated_arrival_days:number; travel_time_simulated:boolean; earliest_expiry:string; reason:string};
+export type Detail = {validation?:{model_mae:number;baseline_mae:number;test_days:number}|null;fallback_reason?:string;demo_date_shift_days?:number;name:string; medicine_id:string; hospital_id:string; unit:string; lead_days:number; safety_days:number; forecast_days:number; risk:Risk; history:{date:string; quantity:number}[]; forecast:{date:string;quantity:number}[]; forecast_method:string; uncertainty:string; batches:Batch[]};
+export type Workspace = {medicines:Medicine[]; inventory:Batch[]; risks:Risk[]; alerts:Alert[]; requests:SupplyRequest[]};
+
+export type Trend = {medicine_id:string;medicine_name:string;unit:string;status:'historical'|'current'|'insufficient';reason:string;points:{date:string;quantity:number}[];baseline_average?:number;recent_average?:number;increase_percent?:number|null;surge?:boolean;current_surge?:boolean};
+export type Priority = {id:string;medicine_id?:string;request_id?:string;title:string;message:string;severity:string;target:'supply'|'medicine'|'request';button:string};
+export type IntelligenceSummary = {hospital_id:string;generated_at:string;method:string;summary_lines:string[];priorities:Priority[];priority_count:number;trends:Trend[];surge_rule:string;counts:Record<string,number>};

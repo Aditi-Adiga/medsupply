@@ -1,0 +1,63 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+
+# Environments
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Notebooks checkpoint
+.ipynb_checkpoints/
+
+# Data artifacts
+*.before-operations.db
+.verification/
+frontend/node_modules/
+frontend/dist/
+frontend/playwright-report/
+frontend/test-results/
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+app/ml/models/*
+!app/ml/models/.gitkeep
+
+# Local databases, backups and logs
+*.db
+*.db-wal
+*.db-shm
+frontend-ui-backup-*/
+stability-backup-*/
+local-server-logs/
+
+*.db
+*.db-wal
+*.db-shm
+frontend-ui-backup-*/
+stability-backup-*/
+local-server-logs/
+
+navigation-backup-*/
+*.backup-*
+
+*backup*/
